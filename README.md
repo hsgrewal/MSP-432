@@ -18,7 +18,9 @@ Code for MSP-432 MCU
 ## MSP432 - Assembly Instruction Set Quick Reference
 ***
 ### Memory access instructions
-LDR			Rd,		[Rn]				; load 32-bit number at [Rn] to Rd
+| INST | Operands | Description |
+|------|----------|-------------|
+LDR | Rd,		[Rn]				|; load 32-bit number at [Rn] to Rd
 LDR			Rd,		[Rn,#off]		; load 32-bit number at [Rn+off] to Rd
 LDR			Rd,		value				; set Rd equal to any 32-bit value (PC rel)
 LDRH		Rd,		[Rn]				; load unsigned 16-bit at [Rn] to Rd
