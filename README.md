@@ -18,31 +18,29 @@ Code for MSP-432 MCU
 ## MSP432 - Assembly Instruction Set Quick Reference
 ***
 ### Memory access instructions
-| INST | Operands | Description |
-|------|----------|-------------|
-LDR | Rd,		[Rn]				|; load 32-bit number at [Rn] to Rd
-LDR			Rd,		[Rn,#off]		; load 32-bit number at [Rn+off] to Rd
-LDR			Rd,		value				; set Rd equal to any 32-bit value (PC rel)
-LDRH		Rd,		[Rn]				; load unsigned 16-bit at [Rn] to Rd
-LDRH		Rd,		[Rn,#off]		; load unsigned 16-bit at [Rn+off] to Rd
-LDRSH		Rd,		[Rn]				; load signed 16-bit at [Rn] to Rd
-LDRSH		Rd,		[Rn,#off]		; load signed 16-bit at [Rn+off] to Rd
-LDRB		Rd,		[Rn]				; load unsigned 8-bit at [Rn] to Rd
-LDRB		Rd,		[Rn,#off]		; load unsigned 8-bit at [Rn+off] to Rd
-LDRSB		Rd,		[Rn]				; load signed 8-bit at [Rn] to Rd
-LDRSB		Rd,		[Rn,#off]		; load signed 8-bit at [Rn+off] to Rd
-STR			Rt,		[Rn]				; store 32-bit Rt to [Rn]
-STR			Rt,		[Rn,#off]		; store 32-bit Rt to [Rn+off]
-STRH		Rt,		[Rn]				; store least sig. 16-bit Rt to [Rn]
-STRH		Rt,		[Rn,#off]		; store least sig. 16-bit Rt to [Rn+off]
-STRB		Rt,		[Rn]				; store least sig. 8-bit Rt to [Rn]
-STRB		Rt,		[Rn,#off]		; store least sig. 8-bit Rt to [Rn+off]
-PUSH		{Rt}							; push 32-bit Rt onto stack
-POP			{Rd}							; pop 32-bit number from stack into Rd
-ADR			Rd, label					; set Rd equal to the address at label
-MOV{S}	Rd, <op2>					; set Rd equal to op2
-MOV			Rd, #im16					; set Rd equal to im16, im16 is 0 to 65535
-MVN{S}	Rd, <op2>					; set Rd equal to -op2
+LDR 	| Rd,		[Rn]				|; load 32-bit number at [Rn] to Rd
+LDR		| Rd,		[Rn,#off]		|; load 32-bit number at [Rn+off] to Rd
+LDR		| Rd,		value				|; set Rd equal to any 32-bit value (PC rel)
+LDRH	| Rd,		[Rn]				|; load unsigned 16-bit at [Rn] to Rd
+LDRH	| Rd,		[Rn,#off]		|; load unsigned 16-bit at [Rn+off] to Rd
+LDRSH	| Rd,		[Rn]				|; load signed 16-bit at [Rn] to Rd
+LDRSH	| Rd,		[Rn,#off]		|; load signed 16-bit at [Rn+off] to Rd
+LDRB	| Rd,		[Rn]				|; load unsigned 8-bit at [Rn] to Rd
+LDRB	| Rd,		[Rn,#off]		|; load unsigned 8-bit at [Rn+off] to Rd
+LDRSB	| Rd,		[Rn]				|; load signed 8-bit at [Rn] to Rd
+LDRSB	| Rd,		[Rn,#off]		|; load signed 8-bit at [Rn+off] to Rd
+STR		| Rt,		[Rn]				|; store 32-bit Rt to [Rn]
+STR		| Rt,		[Rn,#off]		|; store 32-bit Rt to [Rn+off]
+STRH	| Rt,		[Rn]				|; store least sig. 16-bit Rt to [Rn]
+STRH	| Rt,		[Rn,#off]		|; store least sig. 16-bit Rt to [Rn+off]
+STRB	| Rt,		[Rn]				|; store least sig. 8-bit Rt to [Rn]
+STRB	| Rt,		[Rn,#off]		|; store least sig. 8-bit Rt to [Rn+off]
+PUSH	| {Rt}							|; push 32-bit Rt onto stack
+POP		| {Rd}							|; pop 32-bit number from stack into Rd
+ADR		| Rd, label					|; set Rd equal to the address at label
+MOV{S}| Rd, <op2>					|; set Rd equal to op2
+MOV		| Rd, #im16					|; set Rd equal to im16, im16 is 0 to 65535
+MVN{S}| Rd, <op2>					|; set Rd equal to -op2
 
 ### Branch instructions
 B			label		; branch to label		Always
